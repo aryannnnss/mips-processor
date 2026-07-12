@@ -39,8 +39,7 @@ module testbench;
     // $monitor acts like a live print statement. 
     // It prints to the terminal anytime one of these variables changes.
     // Notice how we use 'uut.pc_current' to look INSIDE the datapath module!
-    initial begin
-        $monitor("Time: %0t ns | PC: %0d | Instruction (Hex): %h", $time, uut.pc_current, uut.instruction);
+   initial begin
+        $monitor("Time: %0t ns | PC: %0d | Instruction (Hex): %h", $time, uut.if_pc_current, uut.if_instruction);
     end
-
 endmodule
